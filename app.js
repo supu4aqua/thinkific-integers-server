@@ -1,17 +1,18 @@
-const express = require('express');
-const morgan = require('morgan');
+const express = require("express");
+const morgan = require("morgan");
+const bodyParser = require('body-parser');
 
 const app = express();
 
-// This is middleware that requests pass through
-// on their way to the final handler
+//Middlewares
 app.use(morgan('dev'));
+app.use(bodyParser.json());
 
-//This is the final request handler
-app.get('/', (req, res) => {
-    res.send('Hello Express!');
-});
+//Routes
+app.use('/users', require('./routes/users'));
 
-app.listen(8000, () => {
-    console.log('Express server is listening on port 8000!');
-});
+
+//Start the server
+const port = process.env.PORT || 8000;
+app.listen(port);
+console.log(`Server listening at ${port}`);
