@@ -1,6 +1,10 @@
 const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/UserAuthentication',
+  { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true });
 
 const app = express();
 
