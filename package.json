@@ -4,15 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "nodemon app.js"
+    "server-dev": "cross-env NODE_ENV=prod nodemon server/index.js",
+    "client-dev": "npm start --prefix client",
+    "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "concurrently": "^5.3.0",
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "express-promise-router": "^4.0.1",
+    "generate": "^0.14.0",
+    "generate-gitignore": "^0.2.6",
     "helmet": "^4.4.1",
     "joi": "^17.3.0",
     "jsonwebtoken": "^8.5.1",
