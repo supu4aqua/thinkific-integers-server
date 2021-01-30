@@ -82,7 +82,7 @@ class SignUp extends Component {
             </div>
             {/* Google button using react-google-login */}
              <GoogleLogin 
-              clientId="286252594053-u07blkug87ctmbuagl4imb21vamsbfft.apps.googleusercontent.com"
+              clientId=""
               buttonText="Google"
               onSuccess={this.responseGoogle}
               onFailure={this.responseGoogle}
@@ -90,7 +90,7 @@ class SignUp extends Component {
             />
             {/* Facebook button using react-google-login */}
             <FacebookLogin
-              appId="419490862810580"
+              appId=""
               textButton="Facebook"
               fields="name,email,picture"
               callback={this.responseFacebook}
