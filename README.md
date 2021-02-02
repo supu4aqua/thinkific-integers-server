@@ -1,5 +1,5 @@
 ## Notes
-*Please do not supply your name or email address in this document. We're doing our best to remain unbiased.*
+Server deployed at https://user-integers-api.herokuapp.com
 ### Date
 Feb 3, 2020
 ### Location of deployed application

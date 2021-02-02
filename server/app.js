@@ -9,7 +9,6 @@ const mongoPath = process.env.DATABASE_URL;
 //mongoose.Promise = global.Promise;
 try {
   mongoose.connect(mongoPath, { useNewUrlParser: true, useUnifiedTopology: true });
-  console.log('Connection successful');
 } catch (error) { handleError(error); }
 
 const app = express();
