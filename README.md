@@ -13,10 +13,14 @@
 * [Vercel](https://vercel.com/)
 
 ### API Overview
-```
-/api
 .
 ├── /users/signup
+│   └── POST
+│       └── /
+├── /users/oauth/google
+│   └── POST
+│       └── /
+├── /users/oauth/facebook
 │   └── POST
 │       └── /
 ├── /users/signin
