@@ -12,29 +12,7 @@
 * [Heroku](https://www.heroku.com/)
 * [Vercel](https://vercel.com/)
 
-### API Overview
-```
-.
-├── /users/signup
-│   └── POST
-│       └── /
-├── /users/oauth/google
-│   └── POST
-│       └── /
-├── /users/oauth/facebook
-│   └── POST
-│       └── /
-├── /users/signin
-│   └── POST
-│       └── /
-├── /users/v1/current
-│   └── GET
-│       ├── /
-│   └── PUT
-│       └── ?current_integer=
-├── /users/v1/next
-│   └── GET
-│       ├── /
+
 
 ## Date
 Feb 3, 2020
@@ -98,3 +76,27 @@ It's written in Notes section above.
 
 ## Your feedback on this technical challenge
 Assignment was well explained and documented.
+
+### API Overview
+```
+.
+├── /users/signup
+│   └── POST
+│       └── /
+├── /users/oauth/google
+│   └── POST
+│       └── /
+├── /users/oauth/facebook
+│   └── POST
+│       └── /
+├── /users/signin
+│   └── POST
+│       └── /
+├── /users/v1/current
+│   └── GET
+│       ├── /
+│   └── PUT
+│       └── ?current_integer=
+├── /users/v1/next
+│   └── GET
+│       ├── /
