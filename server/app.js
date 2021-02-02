@@ -3,11 +3,12 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const mongoPath = 'mongodb+srv://mongo-users:2pF8CcARdXybOKaJ@thinkific-users-mongodb.pw95m.mongodb.net/<dbname>?retryWrites=true&w=majority'
 
 require("dotenv").config();
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.connect(mongoPath, { useNewUrlParser: true , useUnifiedTopology: true});
 
 
 const app = express();
