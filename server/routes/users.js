@@ -7,26 +7,30 @@ const { validateBody, schemas } = require('../helpers/routeHelpers');
 const UsersController = require('../controllers/users');
 const passportSignIn = passport.authenticate('local', { session: false });
 const passportJWT = passport.authenticate('jwt', { session: false });
-const passportGoogle = passport.authenticate('googleToken', { session: false });
-const passportFacebook = passport.authenticate('facebookToken', { session: false });
 
+//API Endpoints
 router.route('/signup')
-    .post(validateBody(schemas.authSchema), UsersController.signUp);
+  .post(validateBody(schemas.authSchema), UsersController.signUp);
 
 router.route('/signin')
-    .post(validateBody(schemas.authSchema),passportSignIn, UsersController.signIn);
-    
+  .post(validateBody(schemas.authSchema), passportSignIn, UsersController.signIn);
 
 router.route('/oauth/google')
-    .post(passportGoogle, UsersController.googleOAuth);
+  .post(passport.authenticate('googleToken', { session: false }), UsersController.googleOAuth);
 
 router.route('/oauth/facebook')
-    .post(passportFacebook, UsersController.facebookOAuth);
-    
-    
-    //Request should first authenticate and then run the User controller
+  .post(passport.authenticate('facebookToken', { session: false }), UsersController.facebookOAuth);
+
 router.route('/secret')
-    .get(passportJWT, UsersController.secret);
+  .get(passportJWT, UsersController.secret);
 
+router.route('/v1/current')
+    .get(passportJWT, UsersController.getCurrent);
+  
+router.route('/v1/next')
+  .get(passportJWT, UsersController.getNext);
 
+  router.route('/v1/current')
+  .put(passportJWT, UsersController.reset);
+    
 module.exports = router;

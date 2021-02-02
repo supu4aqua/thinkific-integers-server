@@ -1,11 +1,11 @@
 ## Notes
 *Please do not supply your name or email address in this document. We're doing our best to remain unbiased.*
 ### Date
-The date you're submitting this.
+Feb 3, 2020
 ### Location of deployed application
 If applicable, please provide the url where we can find and interact with your running application.
 ### Time spent
-How much time did you spend on the assignment? Normally, this is expressed in hours.
+7-8 hours. This includes setting up the local environment and refreshing OAuth implementation
 ### Assumptions made
 Use this section to tell us about any assumptions that you made when creating your solution.
 ### Shortcuts/Compromises made
